@@ -1,25 +1,22 @@
 FROM python:3.11-slim
 
+ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    gcc \
-    && rm -rf /var/lib/apt/lists/*
+# Install system packages needed for numpy/pandas/scikit-learn
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends build-essential gcc gfortran libatlas-base-dev libopenblas-dev liblapack-dev libffi-dev ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
 
-# Copy requirements
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy and install Python deps (use render-optimized requirements)
+COPY requirements-render.txt /app/requirements-render.txt
+RUN pip install --upgrade pip setuptools wheel && \
+    pip install --no-cache-dir -r /app/requirements-render.txt
 
-# Copy frontend
-COPY frontend/ ./frontend/
+# Copy project
+COPY . /app
 
-# Create non-root user
-RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
-USER appuser
+EXPOSE 10000
+ENV STREAMLIT_SERVER_HEADLESS=true
 
-# Expose port
-EXPOSE 8501
-
-# Run streamlit
-CMD ["streamlit", "run", "frontend/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "frontend/hepatitis_dashboard.py", "--server.port=10000", "--server.address=0.0.0.0"]

@@ -1,13 +1,10 @@
 services:
   - type: web
     name: hepatitis-dashboard
-    env: python
-    runtime: python-3.11
+    env: docker
     region: oregon
     plan: free
-    # Preinstall build tools and numpy to ensure pandas/scikit-learn use wheels
-    buildCommand: pip install --upgrade pip setuptools wheel && pip install numpy==1.26.2 && pip install -r requirements.txt
-    startCommand: streamlit run frontend/hepatitis_dashboard.py --server.port=10000 --server.address=0.0.0.0
+    dockerfilePath: docker/Dockerfile.frontend
     envVars:
       - key: STREAMLIT_SERVER_HEADLESS
         value: true
