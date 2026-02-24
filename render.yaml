@@ -7,6 +7,10 @@ services:
     dockerfilePath: docker/Dockerfile.frontend
     envVars:
       - key: STREAMLIT_SERVER_HEADLESS
-        value: true
+        value: "true"
       - key: STREAMLIT_SERVER_RUNONSAVE
-        value: false
+        value: "false"
+      - key: STREAMLIT_SERVER_PORT
+        value: "10000"
+      - key: STREAMLIT_SERVER_ADDRESS
+        value: "0.0.0.0"

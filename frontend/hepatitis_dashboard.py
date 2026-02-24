@@ -134,7 +134,7 @@ def generate_hepatitis_report(df, prediction_result):
 # ==================== Sidebar ====================
 
 with st.sidebar:
-    st.image("https://via.placeholder.com/200x60/FF6B6B/FFFFFF?text=Hepatitis+Classifier", use_column_width=True)
+    st.image("https://via.placeholder.com/200x60/FF6B6B/FFFFFF?text=Hepatitis+Classifier", use_container_width=True)
     
     st.title("Navigation")
     
@@ -240,12 +240,12 @@ elif dashboard_type == "Patient Analysis":
     col1, col2 = st.columns(2)
     
     with col1:
-        st.subheader("👤 Patient Information")
+        st.subheader("Patient Information")
         age = st.number_input("Age", min_value=18, max_value=100, value=45)
         sex = st.selectbox("Sex", ["m", "f"])
     
     with col2:
-        st.subheader("🧪 Lab Values")
+        st.subheader("Lab Values")
         alb = st.number_input("ALB (Albumin)", min_value=10.0, max_value=85.0, value=40.0)
         alp = st.number_input("ALP (Alkaline Phosphatase)", min_value=10.0, max_value=450.0, value=70.0)
     
