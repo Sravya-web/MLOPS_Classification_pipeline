@@ -7,7 +7,7 @@ A complete, production-ready machine learning classification system demonstratin
 ![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
 ![Tests](https://img.shields.io/badge/Tests-pytest-orange)
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -17,7 +17,7 @@ A complete, production-ready machine learning classification system demonstratin
 - [Testing](#testing)
 - [Deployment](#deployment)
 
-## 🎯 Overview
+## Overview
 
 This project implements a complete ML classification system following **all MLOps best practices**:
 
@@ -31,7 +31,7 @@ This project implements a complete ML classification system following **all MLOp
 7. **Monitoring**: Prometheus + Grafana
 8. **CI/CD**: GitHub Actions workflows
 
-## ✨ Features
+## Features
 
 - ✅ PostgreSQL database integration
 - ✅ Hyperparameter tuning (Grid/Random/Bayesian Search)
@@ -45,7 +45,7 @@ This project implements a complete ML classification system following **all MLOp
 - ✅ GitHub Actions CI/CD
 - ✅ Render deployment support
 
-## ⚡ Quick Start
+## Quick Start
 
 ### Without Docker
 ```bash
@@ -147,7 +147,7 @@ GET /metrics  # Prometheus metrics
 GET /info     # Model information
 ```
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # All tests
@@ -167,7 +167,7 @@ pytest tests/test_all.py::TestMLPipeline::test_prediction -v
 - Batch predictions
 - Integration tests
 
-## 🚀 Deployment
+## Deployment
 
 ### Render Deployment
 1. Push to GitHub
@@ -180,7 +180,7 @@ pytest tests/test_all.py::TestMLPipeline::test_prediction -v
 docker-compose -f docker/docker-compose.yml up --build
 ```
 
-## 📊 Monitoring
+## Monitoring
 
 ### Prometheus
 - Request counts per endpoint
@@ -193,7 +193,7 @@ docker-compose -f docker/docker-compose.yml up --build
 - Custom metrics visualization
 - Alerts configuration
 
-## 🎯 Business Value
+## Business Value
 
 This system enables:
 - **Automated Classification**: ML-powered predictions
@@ -203,7 +203,7 @@ This system enables:
 - **Reliability**: Comprehensive testing and CI/CD
 - **Monitoring**: Production-grade observability
 
-## 📝 W&B Integration
+## W&B Integration
 
 Experiment tracking automatically logs:
 - Hyperparameters
@@ -212,7 +212,7 @@ Experiment tracking automatically logs:
 - Cross-validation results
 - Training curves
 
-## 🔐 Environment Setup
+## Environment Setup
 
 ```bash
 cp .env.example .env
@@ -223,7 +223,7 @@ MODEL_PATH=model_artifacts/model.joblib
 API_URL=http://localhost:8000
 ```
 
-## 📈 Code Quality
+## Code Quality
 
 ```bash
 # Format
@@ -238,7 +238,7 @@ mypy backend/**/*.py
 
 All code follows PEP8 standards with Flake8 and Pylint checks in CI/CD.
 
-## 🔗 Resources
+## Resources
 
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
 - [Scikit-learn Guide](https://scikit-learn.org/)
@@ -252,4 +252,4 @@ MIT License
 
 ---
 
-**Built with ❤️ for MLOps Excellence** | v1.0.0
+**Built with for MLOps Excellence** | v1.0.0
