@@ -11,7 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from prometheus_client import Counter, Histogram, generate_latest
 from dotenv import load_dotenv
-from backend.data_manager import DataManager
+from data_manager import DataManager
 
 load_dotenv()
 logger = logging.getLogger(__name__)
