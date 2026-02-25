@@ -90,7 +90,7 @@ with st.sidebar:
     # Page selection
     dashboard_type = st.radio(
         "Select Dashboard",
-        ["🏠 Overview", "📈 Performance", "🔄 Pipeline", "⚙️ System", "📊 Detailed Analytics"]
+           ["Overview", "Statistics", "Feature Analysis", "Patient Analysis", "Clinical Insights"]
     )
     
     st.divider()

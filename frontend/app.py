@@ -8,6 +8,9 @@ import plotly.graph_objects as go
 from datetime import datetime
 import os
 
+
+st.image("frontend/image_11.jpeg", width=150)
+
 # Page configuration
 st.set_page_config(
     page_title="ML Classification Predictor",
@@ -47,9 +50,9 @@ with st.sidebar:
     st.subheader("📊 Navigation")
     page = st.radio(
         "Select Page",
-        ["🏠 Home", "🔮 Single Prediction", "📦 Batch Prediction", "📈 Analytics", "❓ About"]
+        [" Home", " Single Prediction", " Batch Prediction", " Analytics", "❓ About"]
     )
-
+    
 # ==================== Helper Functions ====================
 
 def check_api_health():

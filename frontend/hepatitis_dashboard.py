@@ -134,13 +134,13 @@ def generate_hepatitis_report(df, prediction_result):
 # ==================== Sidebar ====================
 
 with st.sidebar:
-    st.image("https://via.placeholder.com/200x60/FF6B6B/FFFFFF?text=Hepatitis+Classifier", use_container_width=True)
+    st.image("/Users/sravya/Desktop/MLOPS_clssification/frontend/image_11.jpeg", use_container_width=True)
     
     st.title("Navigation")
     
     dashboard_type = st.radio(
         "Select Dashboard",
-        ["Overview", "Patient Analysis", "Feature Analysis", "Statistics", "Clinical Insights"]
+        ["Overview", "Statistics","Patient Analysis", "Feature Analysis",  "Clinical Insights"]
     )
     
     st.divider()
