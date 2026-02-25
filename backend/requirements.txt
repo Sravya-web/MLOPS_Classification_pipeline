@@ -6,3 +6,4 @@ joblib
 numpy
 pandas
 prometheus-client
+python-dotenv
