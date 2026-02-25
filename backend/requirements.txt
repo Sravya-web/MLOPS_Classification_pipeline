@@ -1,9 +1,10 @@
 fastapi
 uvicorn
 pydantic
-scikit-learn
-joblib
 numpy
-pandas
-prometheus-client
+joblib
+scikit-learn
 python-dotenv
+prometheus-client
+sqlalchemy
+psycopg2-binary
